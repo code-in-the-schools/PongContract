@@ -4,69 +4,71 @@
 #100 pixels in height, and 15 pixels in width
 #ball and paddle should both properly collide as well as the ball and 3 walls to its left
 #ball ever touches the rightmost wall of the screen the game loop should end completely
-import pygame 
+import pygame
+
 def main():
-
   pygame.init()
-
-screen_width = 15
-
-screen_height = 100
-
-ball_size = 25 
- 
-pygame.display.set_caption("Bouncing Balls")
-done = False 
-clock = pygame.time.Clock()
-ball_list = []
-ball = make_ball()
-ball_list.append(ball)
- 
-
-class Ball(object)
+  screen_width = 15
+  screen_height = 100
+  ball_size = 25 
+class Ball(object):
   def __init__(self):
         self.x = 10 
         self.y = 10
         self.change_x = 10
         self.change_y = 10
+        self.size = 20
+        self.colour = (0, 0, 255)
+        self.thickness = 1
+        
+        def construct_ball():
+          ball.x = 10
+          ball.y = 10
+        return ball
 
-def construct_ball():
-ball = Ball()
-  ball.x = 10
-  ball.y = 10
- 
-    return ball
+  def display(self):
+        pygame.draw.circle(screen, self.colour, (self.x, self.y), self.size, self.thickness)
 
-
-class paddle(object)
+class paddle(object):
   def __init_(self):
     self.x = 15
     self.y = 20
 
 def construct_paddle():
-paddle = paddle()
 
     paddle.x = 10
     paddle.y = 15
  
     return paddle
 
-  def movement(self, width, height):
-    key = pygame.key.get_pressed()
+    def movement(self, width, height):
+      key = pygame.key.get_pressed()
     if key[pygame.K_DOWN]:
-   self.y+ =1
-    if key[pygame.K_UP]:
+  
+      if key[pygame.K_UP]:
 
-      if key[pygame.K_RIGHT]:
+        if key[pygame.K_RIGHT]:
 
-        if key[pygame.K_LEFT]:
-    
+          if key[pygame.K_LEFT]:
+    while :
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT: sys.exit():
+        ball = ball.move(speed)
+        if ball.left < 0 or ball.right > width:
+            speed[0] = -speed[0]
+        if ball.top < 0 or ball.bottom > height:
+            speed[1] = -speed[1] 
 
-
-
-
-
-
+def bounce(self,screen_width,screen_height):
+  self.x += self.x_velocity 
+  self.y += self.y_velocity
+  
 #If the ball ever touches the rightmost wall of the screen the game loop should end completely. 
- 
+  running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+         pygame.quit()
+                quit()   
+
 #resource used- http://programarcadegames.com/python_examples/f.php?file=bouncing_balls.py https://sites.google.com/site/thepythonpongtutorial/drawing-functions/drawing-functions
