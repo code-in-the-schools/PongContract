@@ -5,7 +5,6 @@
 #ball and paddle should both properly collide as well as the ball and 3 walls to its left
 #ball ever touches the rightmost wall of the screen the game loop should end completely
 import pygame 
-
 def main():
 
   pygame.init()
